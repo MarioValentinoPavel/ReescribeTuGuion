@@ -1,0 +1,11 @@
+{
+  "name": "reescribe-tu-guion",
+  "version": "1.0.0",
+  "description": "Landing del curso Reescribe tu Guion, de Mario Valentino Pavel (marketing, conciencia y mentalidad).",
+  "private": true,
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "author": "Mario Valentino Pavel",
+  "license": "UNLICENSED"
+}
