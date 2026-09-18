@@ -8,13 +8,10 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="grain" aria-hidden="true"></div>
-<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
 <div class="nav">
   <div class="nav-inner">
@@ -24,9 +21,7 @@
 </div>
 
 <header class="hero">
-  <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
-  <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
-  <div class="wrap">
+  <div class="wrap hero-inner">
     <h1>Llevas años recitando un guion que <em>escribió otra persona.</em></h1>
     <div class="hero-copy">
       <p class="lede">Reescribe tu Guion no es para cualquiera.</p>
@@ -40,10 +35,13 @@
     </div>
     <p class="hero-tag mono">Un método en 3 actos. Sin florituras. Sin más excusas.</p>
   </div>
+  <div class="hero-media">
+    <img src="car-photo.jpg" alt="Mario Valentino Pavel">
+  </div>
 </header>
 
 <section class="video-section" id="video">
-  <div class="wrap">
+  <div class="wrap center-head">
     <span class="eyebrow">Escena 0 — antes de empezar</span>
     <h2>Mira esto antes de dar el siguiente paso.</h2>
 
@@ -63,62 +61,59 @@
 </section>
 
 <section class="acts-section" id="metodo">
-  <div class="wrap">
+  <div class="wrap center-head">
     <span class="eyebrow">La estructura — 3 actos, una sola historia</span>
     <h2>Cómo funciona</h2>
     <p class="lede">Como en cualquier buen guion, ningún acto funciona solo. Marketing te hace visible, conciencia te hace ver el papel que llevas actuando, y mentalidad es lo que hace que el cambio se quede. En ese orden — o no hay historia. Toca cada acto para leerlo entero.</p>
 
-    <div class="acts">
-      <div class="act-line"><div class="act-line-fill" id="actLineFill"></div></div>
-      <div class="act-list" id="actList">
-        <div class="act open reveal" data-act="1">
-          <button class="act-head" type="button">
-            <span class="act-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h2l4 4V5L6 9H4a1 1 0 0 0-1 1Z"/><path d="M15 8a4 4 0 0 1 0 8"/><path d="M18 5a8 8 0 0 1 0 14"/></svg></span>
-            <span class="act-head-text">
-              <span class="act-kicker">Acto I · Marketing</span>
-              <span class="act-title">Deja de rogar que te vean</span>
-            </span>
-            <span class="act-chevron">+</span>
-          </button>
-          <div class="act-body">
-            <div class="act-body-in">
-              <p class="act-phrase">Tu talento sin visibilidad es un guion que nadie llega a leer.</p>
-              <p class="act-detail">Aprendes a construir una presencia que trabaja por ti mientras duermes: contenido, oferta y posicionamiento — no trucos sueltos, un sistema completo que conecta con el Acto II.</p>
-            </div>
+    <div class="act-list" id="actList">
+      <div class="act open reveal" data-act="1">
+        <button class="act-head" type="button">
+          <span class="act-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h2l4 4V5L6 9H4a1 1 0 0 0-1 1Z"/><path d="M15 8a4 4 0 0 1 0 8"/><path d="M18 5a8 8 0 0 1 0 14"/></svg></span>
+          <span class="act-head-text">
+            <span class="act-kicker">Acto I · Marketing</span>
+            <span class="act-title">Deja de rogar que te vean</span>
+          </span>
+          <span class="act-chevron">+</span>
+        </button>
+        <div class="act-body">
+          <div class="act-body-in">
+            <p class="act-phrase">Tu talento sin visibilidad es un guion que nadie llega a leer.</p>
+            <p class="act-detail">Aprendes a construir una presencia que trabaja por ti mientras duermes: contenido, oferta y posicionamiento — no trucos sueltos, un sistema completo que conecta con el Acto II.</p>
           </div>
         </div>
+      </div>
 
-        <div class="act reveal" data-act="2">
-          <button class="act-head" type="button">
-            <span class="act-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
-            <span class="act-head-text">
-              <span class="act-kicker">Acto II · Conciencia</span>
-              <span class="act-title">Mira el papel que llevas actuando</span>
-            </span>
-            <span class="act-chevron">+</span>
-          </button>
-          <div class="act-body">
-            <div class="act-body-in">
-              <p class="act-phrase">No puedes reescribir un guion que ni siquiera sabes que estás leyendo.</p>
-              <p class="act-detail">Identificas los patrones, las creencias heredadas y los diálogos automáticos que te han mantenido en el mismo personaje durante años — la visibilidad del Acto I sin esto es maquillaje.</p>
-            </div>
+      <div class="act reveal" data-act="2">
+        <button class="act-head" type="button">
+          <span class="act-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span class="act-head-text">
+            <span class="act-kicker">Acto II · Conciencia</span>
+            <span class="act-title">Mira el papel que llevas actuando</span>
+          </span>
+          <span class="act-chevron">+</span>
+        </button>
+        <div class="act-body">
+          <div class="act-body-in">
+            <p class="act-phrase">No puedes reescribir un guion que ni siquiera sabes que estás leyendo.</p>
+            <p class="act-detail">Identificas los patrones, las creencias heredadas y los diálogos automáticos que te han mantenido en el mismo personaje durante años — la visibilidad del Acto I sin esto es maquillaje.</p>
           </div>
         </div>
+      </div>
 
-        <div class="act reveal" data-act="3">
-          <button class="act-head" type="button">
-            <span class="act-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-2 5-5 2 2-5 5-2Z"/></svg></span>
-            <span class="act-head-text">
-              <span class="act-kicker">Acto III · Mentalidad</span>
-              <span class="act-title">Conviértelo en quien eres, no en lo que intentas</span>
-            </span>
-            <span class="act-chevron">+</span>
-          </button>
-          <div class="act-body">
-            <div class="act-body-in">
-              <p class="act-phrase">Sin mentalidad, el marketing es maquillaje y la conciencia es solo teoría.</p>
-              <p class="act-detail">Instalas los hábitos, el criterio y la disciplina que hacen que el cambio no dependa de la motivación del lunes — donde los actos I y II se quedan, por fin, para siempre.</p>
-            </div>
+      <div class="act reveal" data-act="3">
+        <button class="act-head" type="button">
+          <span class="act-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-2 5-5 2 2-5 5-2Z"/></svg></span>
+          <span class="act-head-text">
+            <span class="act-kicker">Acto III · Mentalidad</span>
+            <span class="act-title">Conviértelo en quien eres, no en lo que intentas</span>
+          </span>
+          <span class="act-chevron">+</span>
+        </button>
+        <div class="act-body">
+          <div class="act-body-in">
+            <p class="act-phrase">Sin mentalidad, el marketing es maquillaje y la conciencia es solo teoría.</p>
+            <p class="act-detail">Instalas los hábitos, el criterio y la disciplina que hacen que el cambio no dependa de la motivación del lunes — donde los actos I y II se quedan, por fin, para siempre.</p>
           </div>
         </div>
       </div>
@@ -144,7 +139,7 @@
 </section>
 
 <section class="quiz" id="test">
-  <div class="wrap">
+  <div class="wrap center-head">
     <span class="eyebrow quiz-eyebrow">Tu guion empieza aquí</span>
   </div>
   <div class="quiz-wrap">

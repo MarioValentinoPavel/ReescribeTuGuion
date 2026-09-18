@@ -29,40 +29,15 @@
     onScroll();
   }
 
-  // ---- Cursor glow (desktop pointer only) ----
-  var glow = document.getElementById('cursorGlow');
-  if(glow && !reduceMotion && window.matchMedia('(pointer: fine)').matches){
-    var raf = null, gx = 0, gy = 0;
-    window.addEventListener('mousemove', function(e){
-      gx = e.clientX; gy = e.clientY;
-      glow.classList.add('active');
-      if(!raf){
-        raf = requestAnimationFrame(function(){
-          glow.style.left = gx + 'px';
-          glow.style.top = gy + 'px';
-          raf = null;
-        });
-      }
-    });
-    document.addEventListener('mouseleave', function(){ glow.classList.remove('active'); });
-  }
-
   // ---- Acts accordion ----
   var acts = Array.prototype.slice.call(document.querySelectorAll('.act'));
-  var lineFill = document.getElementById('actLineFill');
-  function updateLine(){
-    var openIdx = acts.findIndex(function(a){return a.classList.contains('open');});
-    lineFill.style.height = openIdx >= 0 ? (((openIdx+1)/acts.length)*100)+'%' : '0%';
-  }
   acts.forEach(function(act){
     act.querySelector('.act-head').addEventListener('click', function(){
       var wasOpen = act.classList.contains('open');
       acts.forEach(function(a){a.classList.remove('open');});
       if(!wasOpen) act.classList.add('open');
-      updateLine();
     });
   });
-  updateLine();
 
   // ---- Quiz wizard ----
   var TOTAL = 6;
