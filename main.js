@@ -1,4 +1,52 @@
 (function(){
+  // ---- Scroll reveal ----
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(revealEls.length){
+    if(reduceMotion || !('IntersectionObserver' in window)){
+      revealEls.forEach(function(el){ el.classList.add('visible'); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
+      revealEls.forEach(function(el){ io.observe(el); });
+    }
+  }
+
+  // ---- Nav shadow on scroll ----
+  var nav = document.querySelector('.nav');
+  if(nav){
+    var onScroll = function(){
+      if(window.scrollY > 8) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  }
+
+  // ---- Cursor glow (desktop pointer only) ----
+  var glow = document.getElementById('cursorGlow');
+  if(glow && !reduceMotion && window.matchMedia('(pointer: fine)').matches){
+    var raf = null, gx = 0, gy = 0;
+    window.addEventListener('mousemove', function(e){
+      gx = e.clientX; gy = e.clientY;
+      glow.classList.add('active');
+      if(!raf){
+        raf = requestAnimationFrame(function(){
+          glow.style.left = gx + 'px';
+          glow.style.top = gy + 'px';
+          raf = null;
+        });
+      }
+    });
+    document.addEventListener('mouseleave', function(){ glow.classList.remove('active'); });
+  }
+
   // ---- Acts accordion ----
   var acts = Array.prototype.slice.call(document.querySelectorAll('.act'));
   var lineFill = document.getElementById('actLineFill');

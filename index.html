@@ -13,6 +13,9 @@
 </head>
 <body>
 
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
 <div class="nav">
   <div class="nav-inner">
     <div class="nav-logo">REESCRIBE <span>TU GUION</span></div>
@@ -21,10 +24,16 @@
 </div>
 
 <header class="hero">
+  <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
   <div class="wrap">
-    <span class="eyebrow mono">FADE IN:</span>
-    <h1>Llevas años recitando un guion que <em>escribió otra persona.</em><span class="cursor">&nbsp;</span></h1>
-    <p class="lede">Reescribe tu Guion es la formación de Mario Valentino Pavel para dejar de improvisar la vida de otro y empezar a dirigir la tuya: marketing que te hace visible, conciencia que te hace ver el papel que actúas y mentalidad que sostiene el cambio cuando la motivación se acaba.</p>
+    <h1>Llevas años recitando un guion que <em>escribió otra persona.</em></h1>
+    <div class="hero-copy">
+      <p class="lede">Reescribe tu Guion no es para cualquiera.</p>
+      <p class="lede">Es para quien está harto de repetir el mismo patrón y ha decidido dejar de vivir en automático.</p>
+      <p class="lede">Para quien quiere tomar el control de su vida, aprender a dirigir sus decisiones, entender desde qué identidad está actuando y construir una mentalidad que no dependa de la motivación.</p>
+      <p class="lede lede-punch">Deja de repetir tu guion. Empieza a escribir el tuyo.</p>
+    </div>
     <div class="hero-actions">
       <a class="btn btn-solid-light" href="#video">Ver la clase gratis</a>
       <a class="btn btn-ghost-light" href="#test">Hacer el test de 2 minutos</a>
@@ -37,12 +46,11 @@
   <div class="wrap">
     <span class="eyebrow">Escena 0 — antes de empezar</span>
     <h2>Mira esto antes de dar el siguiente paso.</h2>
-    <p class="lede">Vídeo gratuito de Mario donde te cuenta en qué consiste exactamente la formación, qué vas a aprender en cada acto y para quién es esto — y para quién no lo es.</p>
 
-    <div class="video-shell">
+    <div class="video-shell reveal">
       <!-- Sustituye este div.video-frame por tu <iframe> real de YouTube/Vimeo (mismas clases/tamaño) -->
       <div class="video-frame" role="img" aria-label="Vista previa del vídeo de la clase gratuita">
-        <span class="slate mono">CLASE GRATUITA · TOMA 01</span>
+        <span class="slate mono">DIR. M.V.P. · TOMA 01</span>
         <div class="play-btn" aria-hidden="true"></div>
       </div>
       <div class="video-caption">
@@ -50,7 +58,7 @@
         <span>00:00 / CLASE GRATUITA</span>
       </div>
     </div>
-    <p class="video-note">Nota para Mario: sustituye el bloque .video-frame por el iframe de tu vídeo real (YouTube o Vimeo) — el comentario en el código marca dónde va.</p>
+    <p class="video-note reveal">Nota para Mario: sustituye el bloque .video-frame por el iframe de tu vídeo real (YouTube o Vimeo) — el comentario en el código marca dónde va.</p>
   </div>
 </section>
 
@@ -63,9 +71,9 @@
     <div class="acts">
       <div class="act-line"><div class="act-line-fill" id="actLineFill"></div></div>
       <div class="act-list" id="actList">
-        <div class="act open" data-act="1">
+        <div class="act open reveal" data-act="1">
           <button class="act-head" type="button">
-            <span class="act-num mono">I</span>
+            <span class="act-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h2l4 4V5L6 9H4a1 1 0 0 0-1 1Z"/><path d="M15 8a4 4 0 0 1 0 8"/><path d="M18 5a8 8 0 0 1 0 14"/></svg></span>
             <span class="act-head-text">
               <span class="act-kicker">Acto I · Marketing</span>
               <span class="act-title">Deja de rogar que te vean</span>
@@ -80,9 +88,9 @@
           </div>
         </div>
 
-        <div class="act" data-act="2">
+        <div class="act reveal" data-act="2">
           <button class="act-head" type="button">
-            <span class="act-num mono">II</span>
+            <span class="act-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
             <span class="act-head-text">
               <span class="act-kicker">Acto II · Conciencia</span>
               <span class="act-title">Mira el papel que llevas actuando</span>
@@ -97,9 +105,9 @@
           </div>
         </div>
 
-        <div class="act" data-act="3">
+        <div class="act reveal" data-act="3">
           <button class="act-head" type="button">
-            <span class="act-num mono">III</span>
+            <span class="act-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-2 5-5 2 2-5 5-2Z"/></svg></span>
             <span class="act-head-text">
               <span class="act-kicker">Acto III · Mentalidad</span>
               <span class="act-title">Conviértelo en quien eres, no en lo que intentas</span>
@@ -115,11 +123,12 @@
         </div>
       </div>
     </div>
+    <p class="whisper reveal">Tu vida cambia cuando empiezas a hacerte responsable de ella.</p>
   </div>
 </section>
 
 <section class="founder">
-  <div class="wrap founder-grid">
+  <div class="wrap founder-grid reveal">
     <div class="founder-photo">
       <img src="castle-photo.jpg" alt="Mario Valentino Pavel de noche, con un castillo iluminado al fondo">
     </div>
@@ -131,6 +140,7 @@
       <p class="founder-sign mono">— M. V. P.</p>
     </div>
   </div>
+  <p class="whisper reveal">Tu vida cambia cuando empiezas a hacerte responsable de ella.</p>
 </section>
 
 <section class="quiz" id="test">
@@ -138,7 +148,7 @@
     <span class="eyebrow quiz-eyebrow">Tu guion empieza aquí</span>
   </div>
   <div class="quiz-wrap">
-    <div class="quiz-card" id="quizCard">
+    <div class="quiz-card reveal" id="quizCard">
       <div class="quiz-progress"><div class="quiz-progress-fill" id="progressFill"></div></div>
       <div class="quiz-meta">
         <span class="mono" id="stepLabel">PÁGINA 1 DE 6</span>
@@ -219,9 +229,24 @@
 
 <footer>
   <div class="footer-inner">
-    <strong>REESCRIBE TU GUION</strong>
-    <span>Un programa de Mario Valentino Pavel — marketing, conciencia y mentalidad.</span>
-    <a href="https://wa.me/34633712475" target="_blank" rel="noopener">WhatsApp +34 633 712 475</a>
+    <div class="footer-top">
+      <strong>REESCRIBE TU GUION</strong>
+      <!-- Sustituye los href="#" por tus perfiles reales -->
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.9.3-1.5 1.6-1.5H16.5V4.3C16.2 4.3 15.2 4 14 4c-2.4 0-4 1.5-4 4.2V10.5H7.5v3H10V21h3.5Z"/></svg></a>
+        <a href="#" class="social-link" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.4 2.2 1.9 3.7 4 3.9v3c-1.5-.1-2.9-.6-4-1.5v6.8a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3.1a2.7 2.7 0 1 0 1.9 2.6V3h2.9Z"/></svg></a>
+        <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+    <p class="footer-tagline">Tu resultado dependerá de tu punto de partida, de las decisiones que tomes, de tu nivel de conciencia y, sobre todo, de cómo lleves a la práctica lo aprendido. Tu vida cambia cuando empiezas a hacerte responsable de ella.</p>
+    <div class="footer-bottom">
+      <span class="mono">M.V.P. © 2026</span>
+      <div class="footer-legal">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos de uso</a>
+        <a href="#">Política de cookies</a>
+      </div>
+    </div>
   </div>
 </footer>
 
